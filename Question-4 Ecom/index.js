@@ -1,17 +1,24 @@
 // Question 4: Sort Products by Price
 
-// const products = [
-//     { name: "Laptop", price: 999 },
-//     { name: "Mouse", price: 25},
-//     { name: "Keyboard", price: 75  },
-//     { name: "Monitor", price: 299 },
-// ]
+const products = [
+    { name: "Laptop", price: 999 },
+    { name: "Mouse", price: 25},
+    { name: "Keyboard", price: 75  },
+    { name: "Monitor", price: 299 },
+]
 
-// function analyzeProducts(products){
+function analyzeProducts(products){
 
-// }
+    const sorted = [...products].sort((a, b) => a.price - b.price)
 
-// console.log(analyzeProducts(products))
+    return {
+        "sorted": sorted,
+        "Cheapest_Product": sorted[0],
+        "Most_Expensive": sorted[sorted.length - 1]
+    }
+}
+
+console.log(analyzeProducts(products))
  
 
 
@@ -25,12 +32,12 @@
 // const sort = num.sort((a,b)=> a - b)
 // console.log(sort)
 
-const products = [
-    { name: "Laptop", price: 999 },
-    { name: "Mouse", price: 25},
-    { name: "Keyboard", price: 75  },
-    { name: "Monitor", price: 299 },
-]
+// const products = [
+//     { name: "Laptop", price: 999 },
+//     { name: "Mouse", price: 25},
+//     { name: "Keyboard", price: 75  },
+//     { name: "Monitor", price: 299 },
+// ]
 
-const sort = products.sort((a, b)=>a.price-b.price)
-console.log(sort)
+// const sort = products.sort((a, b)=>a.price-b.price)
+// console.log(sort)
