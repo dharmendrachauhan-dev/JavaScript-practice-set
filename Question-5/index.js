@@ -9,16 +9,33 @@ const orders = [
 ];
 
 function customerSummary(orders) {
-  // Write your logic here
-  // Return: { total: 0, average: 0, favoriteCategory: "" }
 
   const total = orders.reduce((sum, order)=> sum + order.amount , 0)
   const average = total / orders.length
 
-  // Find favorite category ( most orders )
-
   const categoryCount = {}
-  order.for
+  orders.forEach(category => {
+    return categoryCount[category.category] = (categoryCount[category.category] || 0) + 1
+  });
+
+  let favoriteCategory = "";
+  let maxCount = 0;
+
+  for (let category in categoryCount) {
+    if (categoryCount[category] > maxCount) {
+      maxCount = categoryCount[category];
+      favoriteCategory = category
+    }
+  }
+
+  return {
+    total: total,
+    average: average.toFixed(2),
+    favoriteCategory: favoriteCategory
+  }
+
+
+  return categoryCount
 }
 
 console.log(customerSummary(orders));
