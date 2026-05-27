@@ -130,3 +130,23 @@ const GetBook = books.filter((book) => {
 }).map((book)=> book.title)
 
 console.log(GetBook)
+
+// question filter
+// Filter all books with genre "Fantasy" ✅
+// Filter books published after 2000
+// Filter books published before 1950
+// Filter all "Programming" books
+// Filter books whose edition year is greater than 2015
+// Filter books with genre "Science Fiction"
+// Filter books whose title contains "The"
+// Filter books with publish year between 1990 and 2010
+// Filter all "Horror" books
+// Filter books with title length greater than 15 characters
+
+const GetFilteredBooks = books.filter((books)=>{
+    return books.genre === "Fantasy"
+}).map((books)=> {
+    return books.title
+})
+
+console.log(GetFilteredBooks)
