@@ -37,3 +37,6 @@ student.addMarks("Math", 69)
 student.getPercentage()
 
 // what to do ? show percentage , push subject and marks in obj
+
+
+
