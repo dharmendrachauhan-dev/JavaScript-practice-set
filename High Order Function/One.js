@@ -1,4 +1,4 @@
-const books = [
+export const books = [
   { title: "To Kill a Mockingbird", genre: "Fiction", publish: 1960, edition: 1999 },
   { title: "1984", genre: "Dystopian", publish: 1949, edition: 2003 },
   { title: "The Great Gatsby", genre: "Classic", publish: 1925, edition: 2004 },
@@ -134,14 +134,6 @@ const GetBook = books.filter((book) => {
 // question filter
 
 
-
-
-
-
-
-
-
-
 // Filter all books with genre "Fantasy" ✅
 const GetFilteredBooks = books.filter((books)=>{
     return books.genre === "Fantasy"
@@ -211,3 +203,4 @@ const filterByLength = books.filter((books)=> {
 })
 
 // console.log(filterByLength)
+
