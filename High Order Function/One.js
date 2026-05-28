@@ -129,24 +129,85 @@ const GetBook = books.filter((book) => {
     return book.genre === "Mystery"
 }).map((book)=> book.title)
 
-console.log(GetBook)
+// console.log(GetBook)
 
 // question filter
-// Filter all books with genre "Fantasy" ✅
-// Filter books published after 2000
-// Filter books published before 1950
-// Filter all "Programming" books
-// Filter books whose edition year is greater than 2015
-// Filter books with genre "Science Fiction"
-// Filter books whose title contains "The"
-// Filter books with publish year between 1990 and 2010
-// Filter all "Horror" books
-// Filter books with title length greater than 15 characters
 
+
+
+
+
+
+
+
+
+
+// Filter all books with genre "Fantasy" ✅
 const GetFilteredBooks = books.filter((books)=>{
     return books.genre === "Fantasy"
 }).map((books)=> {
     return books.title
 })
+// console.log(GetFilteredBooks)
 
-console.log(GetFilteredBooks)
+// Filter books published after 2000 ✅
+const fileteredByYear = books.filter((books)=> {
+    return books.publish > 2000
+})
+// console.log(fileteredByYear)
+
+// Filter books published before 1950 ✅
+
+const filterByYear1950 = books.filter((books)=>{
+    return books.publish > 1950
+})
+// console.log(filterByYear1950)
+
+// Filter all "Programming" books ✅
+
+const filterProgramming = books.filter((books)=> {
+    return books.genre === "Programming"
+})
+// console.log(filterProgramming)
+
+// Filter books whose edition year is greater than 2015 ✅
+
+const filterdByEditionYear = books.filter((books)=> {
+    return books.edition > 2015
+})
+// console.log(filterdByEditionYear)
+
+// Filter books with genre "Science Fiction" ✅
+
+const filterBookByScience = books.filter((books)=> {
+    return books.genre === "Science Fiction"
+})
+// console.log(filterBookByScience)
+
+// Filter books whose title contains "The" ✅
+
+const filterByThe = books.filter((books)=>{  // this return truthy
+    return books.title.includes("The")
+})
+// console.log("This one is => ",filterByThe)
+
+// Filter books with publish year between 1990 and 2010  ✅
+
+const filterBtwYear = books.filter((books)=> {
+    return books.publish > 1990 && books.publish < 2010
+})
+// console.log(filterBtwYear)
+
+// Filter all "Horror" books
+
+const filterHorror = books.filter((books)=> {
+    return books.genre === "Horror"
+})
+// console.log(filterHorror)
+
+// Filter books with title length greater than 15 characters
+const filterByLength = books.filter((books)=> {
+    return books.title.length  === 4
+})
+
+// console.log(filterByLength)
