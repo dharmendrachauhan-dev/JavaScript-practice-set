@@ -66,3 +66,26 @@ const generateOtp = (number) => {
 }
 
 console.log(generateOtp(6))
+
+
+// Scopes in Javascript
+// Block scope   
+// Global scope
+// local or function scoper
+
+{ // block scope
+    let hero = "superman"
+    console.log(hero)
+}
+
+// Global scope
+let city = "Mumbai"
+console.log(city)
+
+
+// local or function scoper
+function fruit(){
+    let love = "Mango"
+    console.log(love)
+}
+fruit()
