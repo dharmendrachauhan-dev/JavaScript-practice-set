@@ -89,3 +89,7 @@ function fruit(){
     console.log(love)
 }
 fruit()
+
+
+// variable hoisting
+// Private variables
