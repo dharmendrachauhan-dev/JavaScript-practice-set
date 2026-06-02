@@ -17,3 +17,11 @@ createUser.prototype.google = function(){
 const user1 = new createUser("dharmendra")
 console.log(user1.google())
 
+let name = "guru       "
+let sirname = "chauhan       "
+
+String.prototype.trueLength = function(){
+    return `${this.trim().length}`
+}
+
+console.log(name.trueLength())
